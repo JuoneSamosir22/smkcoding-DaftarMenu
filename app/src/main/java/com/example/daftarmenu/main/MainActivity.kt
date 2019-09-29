@@ -23,7 +23,8 @@ class MainActivity : AppCompatActivity() {
         //list yang menampug objek fragmen
         private val pages = listOf(
             MakananFragmen.getInstance(),
-            MinumanFragmen.getInstance()
+            MinumanFragmen.getInstance(),
+            AddFragmen.getInstance()
         )
 
         //menentukan fragmen yang dibuka pada posisi tertentu
@@ -39,7 +40,8 @@ class MainActivity : AppCompatActivity() {
         override fun getPageTitle(position: Int): CharSequence? {
             return when (position) {
                 0 -> "Makanan"
-                else -> "Minuman"
+                1 -> "Minuman"
+                else -> "Tambah Data"
             }
         }
     }
